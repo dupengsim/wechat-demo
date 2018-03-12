@@ -1,0 +1,24 @@
+
+// 格式化起降时间
+var formatTime = function (sec, monthDay) {
+  if (sec == null) return '--'
+  var date = getDate(sec)
+  var month = formatNumber(date.getMonth() + 1)
+  var day = formatNumber(date.getDate())
+  var hour = date.getHours()
+  var minute = date.getMinutes()
+
+  var time = [hour, minute].map(formatNumber).join(':')
+
+  if (monthDay) {
+    return month + '月' + day + '日' + time
+  } else {
+    return time
+  }
+
+}
+
+function formatNumber(n) {
+  n = n.toString()
+  return n[1] ? n : '0' + n
+}

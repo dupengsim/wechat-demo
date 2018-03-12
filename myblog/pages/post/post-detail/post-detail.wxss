@@ -1,0 +1,175 @@
+
+.container {
+  padding-bottom: 45px;
+}
+
+.c-top {
+  width: 100%;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
+}
+
+.t-info {
+  background-color: #fff;
+  padding: 8px 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.ti-top {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 -15px;
+  padding: 0 15px 8px 15px;
+  color: #888;
+}
+
+.ti-content {
+  border-top: 1px solid #f2f2f2;
+  border-bottom: 1px solid #f2f2f2;
+  padding: 8px 15px;
+  margin: 0 -15px 10px -15px;
+  font-size: 14px;
+}
+
+.ti-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ti-bottom .c-u-img {
+  width: 23px;
+  height: 23px;
+}
+
+.t-info .iconfont {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.comments {
+  margin-top: 10px;
+}
+
+.content {
+  word-break: break-all;
+  font-size: 14px;
+}
+
+.item {
+  display: flex;
+  position: relative;
+  padding: 15px;
+  background-color: #fff;
+  margin-bottom: 1px;
+}
+
+.i-right {
+  width: 100%;
+}
+
+.c-u-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.item .top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3px;
+}
+
+.item .u-name {
+  color: deepskyblue;
+  font-size: 14px;
+}
+
+.item .time {
+  color: #888;
+  font-size: 12px;
+}
+
+.cm-box {
+  display: flex;
+  width: 100%;
+  padding: 8px 5px;
+  background-color: #fff;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.cf-content {
+  background-color: #f2f2f2;
+  padding: 8px 5px;
+  margin-left: 4px;
+  font-size: 12px;
+  height: 30px;
+  max-height: 40px;
+  width: 100%;
+}
+
+.cf-send {
+  width: 50px;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 4px;
+  margin-right: 4px;
+  border-radius: 2px;
+  text-align: center;
+  padding: 0 2px !important;
+  font-size: 12px;
+  background-color: #355A83;
+  color: #fff;
+}
+
+.cf-send.touch-active:active {
+  background-color: #b03f3e;
+}
+
+.license {
+  background-color: #ff9;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 98%;
+}
+
+.license-author, .license-tip {
+  font-size: 26rpx;
+  padding-top: 4rpx;
+  padding-bottom: 4rpx;
+  padding-left: 8rpx;
+}
+
+.license-author text {
+  color: #399ab2 !important;
+}
+
+.bottom-tip {
+  background-color: #fff;
+}
+
+.relate-blog, .relate-blog text {
+  font-size: 26rpx;
+  padding-left: 4rpx;
+}
+
+.category {
+  font-size: 28rpx;
+  padding-left: 4rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.category text {
+  border-bottom: 1px dotted #f60;
+  color: #f60;
+}

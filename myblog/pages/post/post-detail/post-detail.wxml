@@ -1,0 +1,73 @@
+<import src="../../../wxParse/wxParse.wxml" />
+
+<view class="container">
+  <view class="c-top">
+    <!--简介-->
+    <view class="t-info">
+      <view class="ti-top">
+        <text class="title">{{title}}</text>
+      </view>
+      <view class="ti-content">
+        <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+      </view>
+      <view class="ti-bottom">
+        <view>
+          <text class="iconfont icon-date"></text>
+          <text>{{createDate}}</text>
+        </view>
+        <view>
+          <text class="iconfont icon-xihuan"></text>
+          <text>{{views}}</text>
+        </view>
+        <view>
+          <text class="iconfont icon-pinglun1"></text>
+          <text>{{comments}}</text>
+        </view>
+      </view>
+    </view>
+
+    <view class='bottom-tip'>
+      <view class='license'>
+        <view class='license-author'>作者：
+          <text>一蓑烟雨</text>
+        </view>
+        <view class='license-tip'>
+          本文版权归作者所有，欢迎转载，但未经作者同意必须保留此段声明，且在文章页面明显位置给出原文连接，否则保留追究法律责任的权利。
+        </view>
+      </view>
+      <view class='category' catchtap='fetchcategorylist' data-categoryid="{{categoryId}}">
+        分类：
+        <text>{{categoryName}}</text>
+      </view>
+      <view class='relate-blog'>
+        <view catchtap='ontap' data-postid="{{prevData._id}}">上一篇：
+          <text>{{prevData.title}}</text>
+        </view>
+        <view catchtap='ontap' data-postid="{{nextData._id}}">下一篇：
+          <text>{{nextData.title}}</text>
+        </view>
+      </view>
+    </view>
+
+    <!--评论列表-->
+    <view class="comments">
+      <view class="item touch-active" wx:for="{{commentlist}}" wx:for-item="c">
+        <view class="i-right">
+          <view class="top">
+            <text class="u-name">{{c.ipAddress}}</text>
+            <text class="time">{{c.createDate}}</text>
+          </view>
+
+          <!--评论内容-->
+          <view class="content">{{c.content}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!--评论盒子-->
+  <view class='cm-box'>
+    <textarea class='cf-content' maxlength='200' auto-height='true' value="{{comment}}" placeholder='我要评论' bindfocus='textAreaFocus' bindblur='textAreaBlur' bindinput='textAreaInput'></textarea>
+    <text class="cf-send touch-active" bindtap='submit'>发送</text>
+  </view>
+</view>

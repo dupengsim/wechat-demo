@@ -1,0 +1,11 @@
+<view class='container'>
+  <image src="../../img/avatar/crab.jpg"></image>
+  <view class='list'>
+    <text class='list-title'>分类列表</text>
+  </view>
+  <view class='list-item' wx:for="{{(categoryList)}}" wx:key="key">
+    <view class='item' catchtap='onTap' data-id="{{item._id}}">
+      <text>{{item.categoryname}}</text>
+    </view>
+  </view>
+</view>

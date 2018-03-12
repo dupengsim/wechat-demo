@@ -1,0 +1,16 @@
+<import src="post-item/post-item-template.wxml" />
+<!--引入加载更多模版-->
+<import src="../../template/loading.wxml" />
+
+<view>
+  <scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollHeight}}px;" class="list" bindscrolltolower="bindDownLoad" bindscroll="scroll" bindscrolltoupper="refresh">
+    <image src="../../img/avatar/crab.jpg"></image>
+    <view wx:for="{{postList}}" wx:for-item="item" wx:key="key">
+      <!--template-->
+      <!--使用...来展开item对象-->
+      <view catchtap="onTap" data-postid="{{item._id}}">
+        <template is="post-item" data="{{...item}}" />
+      </view>
+    </view>
+  </scroll-view>
+</view>
